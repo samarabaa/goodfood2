@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Editar Receita</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row justify-content-center>
+      <ion-col align-self-center size-xs="10">
+
+        <ion-item>
+          <ion-input [(ngModel)]="editarReceita.imagem" placeholder="Selecione a imagem" color="primary"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="editarReceita.titulo" placeholder="Digite o título" color="primary"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="editarReceita.ingredientes" placeholder="Digite os ingredientes" color="primary"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="editarReceita.porcoes" placeholder="Digite a quantidade de porcoes" color="primary"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="editarReceita.tempodepreparo" placeholder="Digite o tempo de preparo em minutos" color="primary">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="editarReceita.mododepreparo" placeholder="Digite o mododepreparo" color="primary"></ion-input>
+        </ion-item>
+
+        <section>
+          <ion-button (click)="save()" class="" color="dark" expand="full">SALVAR</ion-button>
+        </section>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

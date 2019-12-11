@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Novo Usuário</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+    <div>
+     
+      <input [(ngModel)]="newUser.name" placeholder="Digite aqui o seu nome..." type="text" name="nome" required>
+      <input [(ngModel)]="newUser.email" placeholder="Digite aqui o seu email..." type="email" name="email" required>
+      <input [(ngModel)]="newUser.senha" placeholder="Digite aqui a sua senha..." type="password" name="senha" required>
+
+      <button [disabled]="!newUser.name || !newUser.email || !newUser.senha" class="btn btn-primary btn-block"
+        (click)="addUser()">Adicionar</button>
+    </div>
+    <br>
+
+  </div>
+</ion-content>

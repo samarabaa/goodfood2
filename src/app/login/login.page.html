@@ -1,0 +1,26 @@
+
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row justify-content-center>
+      <ion-col align-self-center size-xs="12">
+        <img src="assets\img\tela.png" alt="some text" width=400 height=400>
+
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item>
+    <ion-label position="floating" style="color: black">E-mail</ion-label>
+    <ion-input name="loginInput" style="color: black" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" style="color: black">Senha</ion-label>
+    <ion-input name="passwordInput" [(ngModel)]="password" required type="password" style="color: black"></ion-input>
+  </ion-item>
+
+  <ion-button [disabled]="!email || !password" (click)="login()" expand="block" color="dark">ENTRAR</ion-button>
+  <ion-button (click)="paginaHome()" expand="block" color="dark">CADASTRAR-SE</ion-button>
+
+</ion-content>

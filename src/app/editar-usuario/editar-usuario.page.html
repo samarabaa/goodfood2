@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-button color="dark" (click)="dismiss()">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row justify-content-center>
+      <ion-col align-self-center size-xs="10">
+        <div (click)="changePhoto()">
+          <img *ngIf="!editarUsuario.imagem" src="assets/padrao.png">
+          <ion-img *ngIf="editarUsuario.imagem" [src]="editarUsuario.imagem"></ion-img>
+        </div>
+        <ion-item>
+          <ion-input [(ngModel)]="editarUsuario.name" placeholder="Digite o nome" color="primary"></ion-input>
+        </ion-item>
+        <section>
+          <ion-button (click)="save()" class="btn-save" color="primary" expand="full">SALVAR</ion-button>
+        </section>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

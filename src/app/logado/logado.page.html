@@ -1,0 +1,15 @@
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let receita of receitasLista" color="primary">
+      <img src="" />
+      <ion-card-header>
+        <ion-img *ngIf="receita.imagem" [src]="receita.imagem"></ion-img>
+        <img *ngIf="!receita.imagem" src="assets/default.png">
+        <ion-card-subtitle>{{receita.releaseYear}}</ion-card-subtitle>
+        <ion-card-title>{{receita.titulo}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{receita.mododepreparo}}</ion-card-content>
+      <ion-label color="secondary" (click)="verReceita(receita)">Ver mais</ion-label>
+    </ion-card>
+  </ion-list>
+</ion-content>

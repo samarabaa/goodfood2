@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-icon name="ios-arrow-back" (click)="dismiss()" color="primary"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <div (click)="changePhoto()">
+      <img *ngIf="!verReceita.imagem" src="assets/default.png">
+      <ion-img *ngIf="verReceita.imagem" [src]="verReceita.imagem"></ion-img>
+    </div>
+
+    <ion-item>
+      <ion-label *ngIf="!isEditingReceita" color="primary">{{verReceita.titulo}}</ion-label>
+      <ion-input *ngIf="isEditingReceita" color="primary" [(ngModel)]="verReceita.titulo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label *ngIf="!isEditingReceita" color="primary">{{verReceita.ingredientes}}</ion-label>
+      <ion-input *ngIf="isEditingReceita" color="primary" [(ngModel)]="verReceita.ingredientes"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label *ngIf="!isEditingReceita" color="primary">{{verReceita.porcao}}</ion-label>
+      <ion-input *ngIf="isEditingReceita" color="primary" [(ngModel)]="verReceita.porcao"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label *ngIf="!isEditingReceita" color="primary">{{verReceita.tempodepreparo}}</ion-label>
+      <ion-input *ngIf="isEditingReceita" color="primary" [(ngModel)]="verReceita.tempodepreparo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label *ngIf="!isEditingReceita" color="primary">{{verReceita.mododepreparo}}</ion-label>
+      <ion-input *ngIf="isEditingReceita" color="primary" [(ngModel)]="verReceita.mododepreparo"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-button *ngIf="!isEditingReceita" (click)="edit()" color="dark">Editar Receita</ion-button>
+    <ion-button *ngIf="isEditingReceita" (click)="cancelEdit()" color="dark">Cancelar</ion-button>
+    <ion-button *ngIf="isEditingReceita" (click)="confEditReceita()" color="dark">Salvar</ion-button>
+  </ion-item>
+
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-content>
+  <div class="ion-padding">
+
+    <div>
+      <h2>Cadastrar Receita</h2>
+     
+      <input [(ngModel)]="newReceita.titulo" placeholder="Digite aqui o nome da receita..." type="text" name="titulo" required>
+      <input [(ngModel)]="newReceita.tempodepreparo" placeholder="Digite aqui o tempo de preparo (minutos)..." type="number" name="tempodepreparo" required>
+      <input [(ngModel)]="newReceita.porcao" placeholder="Digite aqui quantas porcoes rendem..." type="number" name="porcao" required>
+      <input [(ngModel)]="newReceita.ingredientes" placeholder="Digite aqui os ingredientes..." type="text" name="ingredientes" required>  
+      <input [(ngModel)]="newReceita.mododepreparo" placeholder="Digite aqui o modo de preparo..." type="text" name="mododepreparo" required>
+
+      
+
+      <button [disabled]="!newReceita.titulo || !newReceita.tempodepreparo || !newReceita.porcao || !newReceita.ingredientes || !newReceita.mododepreparo "  class="btn btn-primary btn-block" style="color: #f0e8ec" (click)="adicionarReceita()" color="dark">Adicionar</button>
+    </div>
+
+  </div>
+</ion-content>
