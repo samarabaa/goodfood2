@@ -16,28 +16,35 @@
     </div>
 
     <ion-item>
-      <ion-label *ngIf="!isEditingReceita" color="primary">{{verReceita.titulo}}</ion-label>
+      <ion-text *ngIf="!isEditingReceita" color="primary">
+        <h3>{{verReceita.titulo}}</h3>
+      </ion-text>
       <ion-input *ngIf="isEditingReceita" color="primary" [(ngModel)]="verReceita.titulo"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label *ngIf="!isEditingReceita" color="primary">{{verReceita.ingredientes}}</ion-label>
+      <ion-text *ngIf="!isEditingReceita" color="primary">
+        <h5>{{verReceita.ingredientes}}</h5>
+      </ion-text>
       <ion-input *ngIf="isEditingReceita" color="primary" [(ngModel)]="verReceita.ingredientes"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label *ngIf="!isEditingReceita" color="primary">{{verReceita.porcao}}</ion-label>
-      <ion-input *ngIf="isEditingReceita" color="primary" [(ngModel)]="verReceita.porcao"></ion-input>
+      <ion-label *ngIf="!isEditingReceita" color="primary">Rende {{verReceita.porcao}} porções</ion-label>
+      <ion-input class="porcao" *ngIf="isEditingReceita" color="primary" [(ngModel)]="verReceita.porcao"> Porções: </ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label *ngIf="!isEditingReceita" color="primary">{{verReceita.tempodepreparo}}</ion-label>
-      <ion-input *ngIf="isEditingReceita" color="primary" [(ngModel)]="verReceita.tempodepreparo"></ion-input>
+      <ion-label *ngIf="!isEditingReceita" color="primary">{{verReceita.tempodepreparo}} minutos</ion-label>
+      <ion-input class="tempo" *ngIf="isEditingReceita" color="primary" [(ngModel)]="verReceita.tempodepreparo">Minutos:</ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label *ngIf="!isEditingReceita" color="primary">{{verReceita.mododepreparo}}</ion-label>
+      <ion-text *ngIf="!isEditingReceita" color="primary">
+        <h5>{{verReceita.mododepreparo}}</h5>
+      </ion-text>
       <ion-input *ngIf="isEditingReceita" color="primary" [(ngModel)]="verReceita.mododepreparo"></ion-input>
+
     </ion-item>
   </ion-list>
 

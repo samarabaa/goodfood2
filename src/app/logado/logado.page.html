@@ -8,8 +8,9 @@
         <ion-card-subtitle>{{receita.releaseYear}}</ion-card-subtitle>
         <ion-card-title>{{receita.titulo}}</ion-card-title>
       </ion-card-header>
-      <ion-card-content>{{receita.mododepreparo}}</ion-card-content>
-      <ion-label color="secondary" (click)="verReceita(receita)">Ver mais</ion-label>
+      <ion-card-content>Rende {{receita.porcao}} porções</ion-card-content>
+      <ion-card-content>{{receita.tempodepreparo}} min</ion-card-content>
+      <ion-label class="verMais" color="secondary" (click)="verReceita(receita)">Ver mais</ion-label>
     </ion-card>
   </ion-list>
 </ion-content>
